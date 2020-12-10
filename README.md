@@ -44,5 +44,11 @@ get_table_rows_ex  testcont  item {"lower_bound":0,"upper_bound":-1,"limit":10,"
 2,根据持有者查询(lower_bound设为持有者的uid)
 get_table_rows_ex  testcont  item {"lower_bound":28182,"upper_bound":-1,"limit":10,"index_position":"2","reverse":false}
 
+查询账号28182的token余额
+get_table_objects  316049304  28182  false accounts  0   -1  100
+
+查询category为"tokentypes"的token
+get_table_objects  316049304  tokentypes  true itemstats  0   -1  100
+
 更新合约
 update_contract  testcont null ./nft false true
